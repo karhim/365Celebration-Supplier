@@ -1,0 +1,126 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="Supplier_1.Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css" />
+    <link href="css/fontawesome-all.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/css/main.css" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>365Celebrations</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        header, main, footer {
+            padding-left: 300px;
+        }
+
+        @media only screen and (max-width : 1002px) {
+            header, main, footer {
+                padding-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server" EnableCdn="true">
+            <Scripts>
+                <asp:ScriptReference Path="~/js/main.js" />
+            </Scripts>
+        </asp:ScriptManager>
+        <!-- NAVBAR -->
+        <header>
+            <nav>
+                <div class="nav-wrapper blue darken-1">
+                    <div class="row">
+                        <div class="col s12">
+                            
+                            <a href="" target="_blank" class="brand-logo">Vendor</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+            
+
+        <!-- LEFT SIDEBAR	 -->
+        <ul id="sidenav" class="sidenav sidenav-fixed">
+            <li>
+                <div class="userView">
+                    <a class="waves-effect" href="#!"><img class="background" height="100px" width="290px" src="img/logo.png" ></a>
+                </div>
+            </li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a class="waves-effect" href="#!"><i class="material-icons">dashboard</i>Dashboard</a></li>
+            <li><a class="waves-effect" href="#!"><i class="material-icons">person</i>Customer</a></li>
+            <li><a class="waves-effect" href="#!"><i class="material-icons">store</i>Vendors</a></li>
+            <li><a class="waves-effect" href="#!"><i class="material-icons">build</i>Services</a></li>
+            <li><a class="waves-effect" href="#!"><i class="material-icons">calendar_today</i>Appointment History</a></li>
+            <li><a class="waves-effect" href="#!"><i class="material-icons">receipt</i>Invoice</a></li>
+            <li><a class="waves-effect" href="#!"><i class="material-icons">attach_money</i>Payment History</a></li>
+            <li><a class="waves-effect" href="#!"><i class="material-icons">local_shipping</i>Delivery</a></li>
+            <li><a class="waves-effect" href="#!"><i class="material-icons">message</i>Inquiry</a></li>
+            <li><a class="waves-effect" href="#!"><i class="material-icons">rate_review</i>Reviews</a></li>
+            <li><a class="waves-effect" href="#!"><i class="material-icons">subdirectory_arrow_right</i>Log Out</a></li>
+            
+        </ul>
+
+
+
+
+
+        <main>
+           
+
+        </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <main>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </main>
+    </form>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+</body>
+</html>
+
