@@ -17,7 +17,7 @@
                             <tr>
                                 <td><b>Bill To</b></td>
                                 <td><b>Month Of Invoice</b></td>
-                                <td><b>Invoice #</b></td>
+                                <td><b>Invoice Number #</b></td>
                                 <td><b>Invoice Date</b></td>
                             </tr>
                             <tr>
@@ -40,18 +40,14 @@
                 <br />
                 <div class="col s12">
                     <div class="form-container">
-                        <%-- <asp:GridView ID="gv_order" CssClass="striped" runat="server" AutoGenerateColumns="False" DataKeyNames="gsorderId" OnRowDataBound="gv_order_RowDataBound">
-                            <Columns>
-                                <asp:BoundField HeaderText="Qty" DataField="gsquantity" />
-                                <asp:TemplateField HeaderText="Description">
-                                    <ItemTemplate>
-                                <asp:Label id="lbl_description" runat="server" Text='<%# Eval("gsprodId") %>'></asp:Label>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                                <asp:BoundField HeaderText="Unit Price" DataFormatString="{0:C}" DataField="gsorderPrice" />
-                                <asp:BoundField HeaderText="Amount" DataFormatString="{0:C}" HtmlEncode="false" DataField="gsfinalPrice" />
-                            </Columns>
-                        </asp:GridView>--%>
+                         <asp:GridView ID="gv_order" CssClass="striped" runat="server" AutoGenerateColumns="False">
+                             <Columns>
+                                 <asp:BoundField HeaderText="Date Of Delivery" ReadOnly="True" />
+                                 <asp:BoundField HeaderText="Description" ReadOnly="True" />
+                                 <asp:BoundField HeaderText="Total Amount" />
+                             </Columns>
+                               
+                        </asp:GridView>
                         <div class="input-field col s12">
                             <asp:Label ID="lbl_subtotal" CssClass="right" runat="server"></asp:Label>
                             <br />

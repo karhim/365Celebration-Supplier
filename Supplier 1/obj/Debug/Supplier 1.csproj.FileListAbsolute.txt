@@ -70,3 +70,39 @@ D:\Supplier 1 (30-12)\Supplier 1\Supplier 1\bin\Newtonsoft.Json.xml
 D:\Supplier 1 (30-12)\Supplier 1\Supplier 1\obj\Debug\Supplier 1.csprojResolveAssemblyReference.cache
 D:\Supplier 1 (30-12)\Supplier 1\Supplier 1\obj\Debug\Supplier 1.dll
 D:\Supplier 1 (30-12)\Supplier 1\Supplier 1\obj\Debug\Supplier 1.pdb
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\ApplicationInsights.config
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\roslyn\csc.exe
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\roslyn\System.Collections.Immutable.dll
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\roslyn\System.Reflection.Metadata.dll
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\roslyn\vbc.exe
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\roslyn\VBCSCompiler.exe
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\roslyn\VBCSCompiler.exe.config
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Supplier 1.dll.config
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Supplier 1.dll
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Supplier 1.pdb
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Microsoft.AI.DependencyCollector.dll
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Microsoft.AI.Web.dll
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Microsoft.AI.WindowsServer.dll
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Microsoft.ApplicationInsights.dll
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Newtonsoft.Json.dll
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Microsoft.AI.DependencyCollector.xml
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Microsoft.AI.Web.xml
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Microsoft.AI.WindowsServer.xml
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Microsoft.ApplicationInsights.xml
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Newtonsoft.Json.pdb
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Newtonsoft.Json.xml
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\obj\Debug\Supplier 1.csprojResolveAssemblyReference.cache
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\obj\Debug\Supplier 1.dll
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\obj\Debug\Supplier 1.pdb

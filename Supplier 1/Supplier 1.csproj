@@ -126,6 +126,7 @@
     </Content>
     <Content Include="Main.Master" />
     <Content Include="Invoice.aspx" />
+    <Content Include="WebForm2.aspx" />
     <Content Include="WsServiceCatalog.svc" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -184,6 +185,13 @@
     </Compile>
     <Compile Include="Invoice.aspx.designer.cs">
       <DependentUpon>Invoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
     <Compile Include="WsServiceCatalog.svc.cs">
       <DependentUpon>WsServiceCatalog.svc</DependentUpon>
