@@ -146,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BLLSupplier.cs" />
+    <Compile Include="DAL\DALinvoice.cs" />
     <Compile Include="DAL\Supplier_DA.cs" />
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>

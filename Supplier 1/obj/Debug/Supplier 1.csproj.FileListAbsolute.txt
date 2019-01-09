@@ -103,6 +103,6 @@ D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Microsoft.Applicati
 D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Newtonsoft.Json.pdb
 D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\bin\Newtonsoft.Json.xml
-D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\obj\Debug\Supplier 1.csprojResolveAssemblyReference.cache
 D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\obj\Debug\Supplier 1.dll
 D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\obj\Debug\Supplier 1.pdb
+D:\Supplier 1 (30-12)\365Celebration-Supplier\Supplier 1\obj\Debug\Supplier 1.csprojResolveAssemblyReference.cache
