@@ -25,15 +25,8 @@ namespace Supplier_1
             DALinvoice invoice = new DALinvoice();
             int result = 0;
             result = invoice.InsertInvoiceDate(lbl_invoicedate.Text, lbl_invMonth.Text);
-            if (result > 0)
-            {
-                Response.Write("success");
-            }
-            else
-            {
-                Response.Write("fail");
 
-            }
+            Response.Redirect("WebForm2.aspx");
         }
     }
 }

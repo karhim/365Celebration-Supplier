@@ -20,10 +20,14 @@
                         <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("paymentStatus") %>'></asp:TextBox>
                     </EditItemTemplate>
                     <ItemTemplate>
-                        <asp:Label ID="Label1" runat="server" Text='<%# Bind("paymentStatus") %>'></asp:Label>
+                        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" Height="16px" Width="227px">
+                            <asp:ListItem>Waiting</asp:ListItem>
+                            <asp:ListItem>Pending</asp:ListItem>
+                            <asp:ListItem>Completed</asp:ListItem>
+                        </asp:DropDownList>
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:CommandField ShowSelectButton="True" />
+                <asp:CommandField ShowEditButton="True" />
             </Columns>
         </asp:GridView>
     

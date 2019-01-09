@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Configuration;
 
@@ -10,6 +13,7 @@ namespace Supplier_1.DAL
     public class DALinvoice
     {
         private String connectionString = WebConfigurationManager.ConnectionStrings["Supplier"].ConnectionString;
+        private string errMsg;
 
         public int InsertInvoiceDate(string invoice, string Month)
         {
@@ -29,6 +33,32 @@ namespace Supplier_1.DAL
             myConnection.Close();
 
             return result;
+        }
+        public DataSet SelectInvoiceDate()
+        {
+            StringBuilder sql;
+            SqlDataAdapter da;
+            DataSet invoice = new DataSet();
+
+            SqlConnection myConnect = new SqlConnection(connectionString);
+            sql = new StringBuilder();
+            sql.AppendLine("SELECT invoiceDate, InvoiceMonth, paymentStatus, invoiceID FROM Invoice");
+
+            try
+            {
+                da = new SqlDataAdapter(sql.ToString(), myConnect);
+                da.Fill(invoice);
+            }
+            catch (Exception ex)
+            {
+                errMsg = ex.Message;
+            }
+            finally
+            {
+                myConnect.Close();
+            }
+
+            return invoice;
         }
     }
 }

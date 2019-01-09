@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Data;
 
 namespace Supplier_1
 {
@@ -21,6 +22,8 @@ namespace Supplier_1
 
         [OperationContract]
         string getServiceID(string name);
-        
+
+        [OperationContract]
+        DataSet SelectInvoiceDate();
     }
 }

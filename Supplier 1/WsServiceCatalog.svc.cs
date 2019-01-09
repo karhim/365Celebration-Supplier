@@ -35,5 +35,11 @@ namespace Supplier_1
 
             return a.getServiceID(name);
         }
+
+        public DataSet SelectInvoiceDate()
+        {
+            Supplier_1.BLL.BLLSupplier a = new Supplier_1.BLL.BLLSupplier();
+            return a.SelectInvoiceDate();
+        }
     }
 }

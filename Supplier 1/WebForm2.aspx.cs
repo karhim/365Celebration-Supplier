@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Supplier_1.DAL;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -22,25 +23,38 @@ namespace Supplier_1
 
         private void bindGridView()
         {
-            //get connection string from web.config
-            string strConnectionString =
-                ConfigurationManager.ConnectionStrings["Supplier"].ConnectionString;
-            SqlConnection myConnect = new SqlConnection(strConnectionString);
-
-            string strCommandText = "SELECT invoiceDate, InvoiceMonth, paymentStatus, invoiceID FROM Invoice";
-
-            SqlCommand cmd = new SqlCommand(strCommandText, myConnect);
-            myConnect.Open();
-            SqlDataReader reader = cmd.ExecuteReader();
-
-            DataTable dt = new DataTable();
-            dt.Load(reader);  //** ONLY DATA TABLE CAN USE PAGING
-
-            reader.Close();
-            myConnect.Close();
-
-            GridView1.DataSource = dt;
+            DAL.DALinvoice a = new DAL.DALinvoice();
+            GridView1.DataSource = a.SelectInvoiceDate();
             GridView1.DataBind();
+
+
+            //DALinvoice invoice = new DALinvoice();
+
+            //string invoiceid = invoice.invoiceID;
+            //string invoicedate = invoice.invoiceDate;
+            //string invoicemonth = invoice.InvoiceMonth;
+            //string paymentstatus = invoice.paymentStatus;
+            //GridView1.DataSource = invoice.SelectInvoiceDate(invoiceid, invoicedate, invoicemonth, paymentstatus);
+            //GridView1.DataBind();
+            ////get connection string from web.config
+            //string strConnectionString =
+            //    ConfigurationManager.ConnectionStrings["Supplier"].ConnectionString;
+            //SqlConnection myConnect = new SqlConnection(strConnectionString);
+
+            //string strCommandText = "SELECT invoiceDate, InvoiceMonth, paymentStatus, invoiceID FROM Invoice";
+
+            //SqlCommand cmd = new SqlCommand(strCommandText, myConnect);
+            //myConnect.Open();
+            //SqlDataReader reader = cmd.ExecuteReader();
+
+            //DataTable dt = new DataTable();
+            //dt.Load(reader);  //** ONLY DATA TABLE CAN USE PAGING
+
+            //reader.Close();
+            //myConnect.Close();
+
+            //GridView1.DataSource = dt;
+            //GridView1.DataBind();
 
         }
     }
