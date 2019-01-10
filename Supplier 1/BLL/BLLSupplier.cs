@@ -30,6 +30,12 @@ namespace Supplier_1.BLL
             return iv.SelectInvoiceDate();
         }
 
+        public DataSet SelectInvoiceDetails()
+        {
+            DALinvoice iv = new DALinvoice();
+            return iv.SelectInvoiceDetails();
+        }
+
 
     }
 }

@@ -41,5 +41,11 @@ namespace Supplier_1
             Supplier_1.BLL.BLLSupplier a = new Supplier_1.BLL.BLLSupplier();
             return a.SelectInvoiceDate();
         }
+
+        public DataSet SelectInvoiceDetails()
+        {
+            Supplier_1.BLL.BLLSupplier a = new Supplier_1.BLL.BLLSupplier();
+            return a.SelectInvoiceDetails();
+        }
     }
 }

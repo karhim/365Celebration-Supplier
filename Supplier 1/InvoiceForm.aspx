@@ -41,11 +41,11 @@
                 <br />
                 <div class="col s12">
                     <div class="form-container">
-                        <asp:GridView ID="gv_order" CssClass="striped" runat="server" AutoGenerateColumns="False">
+                        <asp:GridView ID="gv_invoice" CssClass="striped" runat="server" AutoGenerateColumns="False">
                             <Columns>
-                                <asp:BoundField HeaderText="Date Of Delivery" ReadOnly="True" />
-                                <asp:BoundField HeaderText="Description" ReadOnly="True" />
-                                <asp:BoundField HeaderText="Total Amount" />
+                                <asp:BoundField HeaderText="Date Of Delivery" ReadOnly="True" DataField="startDate" />
+                                <asp:BoundField HeaderText="Description" ReadOnly="True" DataField="aID" />
+                                <asp:BoundField HeaderText="Total Amount" DataField="finalPrice" />
                             </Columns>
 
                         </asp:GridView>

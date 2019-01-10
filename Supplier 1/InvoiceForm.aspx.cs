@@ -14,11 +14,21 @@ namespace Supplier_1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                bindGridView();
+            }
+
             lbl_invoicedate.Text = DateTime.Now.ToString("yyyy-MM-dd");
             lbl_billing.Text = "365Celebration";
             lbl_invMonth.Text = Request.QueryString["data"];
         }
-
+        private void bindGridView()
+        {
+            DAL.DALinvoice a = new DAL.DALinvoice();
+            gv_invoice.DataSource = a.SelectInvoiceDetails();
+            gv_invoice.DataBind();
+        }
         protected void btn_close_Click(object sender, EventArgs e)
         {
 
@@ -28,5 +38,7 @@ namespace Supplier_1
 
             Response.Redirect("WebForm2.aspx");
         }
-    }
+
+       
+        }
 }

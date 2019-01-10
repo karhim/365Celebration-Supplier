@@ -15,7 +15,7 @@ namespace Supplier_1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Page.IsPostBack == false)
+            if (!IsPostBack)
             {
                 bindGridView();
             }
@@ -55,6 +55,18 @@ namespace Supplier_1
 
             //GridView1.DataSource = dt;
             //GridView1.DataBind();
+
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GridViewRow row = GridView1.SelectedRow;
+            int invoiceid = int.Parse(row.Cells[0].Text);
+
+            DropDownList ddl = (DropDownList)row.FindControl("DropDownList1");
+            string paymentStatus = ddl.SelectedValue;
+            DALinvoice invoice = new DALinvoice();
+            invoice.updatePaymentStatus(invoiceid, paymentStatus);
 
         }
     }

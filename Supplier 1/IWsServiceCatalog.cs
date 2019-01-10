@@ -25,5 +25,8 @@ namespace Supplier_1
 
         [OperationContract]
         DataSet SelectInvoiceDate();
+
+        [OperationContract]
+        DataSet SelectInvoiceDetails();
     }
 }
