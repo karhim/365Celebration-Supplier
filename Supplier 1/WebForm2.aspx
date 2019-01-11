@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
         <div>
 
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" >
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False"  OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" >
                 <Columns>
                     <asp:BoundField DataField="invoiceID" HeaderText="Invoice ID" ReadOnly="True" />
                     <asp:BoundField DataField="invoiceDate" DataFormatString="{0:dd/MM/yyyy}" HeaderText="Invoice Date" ReadOnly="True" />
@@ -20,14 +20,11 @@
                             <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("paymentStatus") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:DropDownList ID="DropDownList1" runat="server" Height="16px" Width="227px" AutoPostBack="True">
-                                <asp:ListItem Text="Waiting" Value="Waiting"></asp:ListItem>
-                                <asp:ListItem Text="Pending" Value="Pending"></asp:ListItem>
-                                <asp:ListItem Text="Completed" Value="Completed"></asp:ListItem>
-                            </asp:DropDownList>
+                            <asp:Label ID="Label1" runat="server" Text='<%# Bind("paymentStatus") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:CommandField ShowSelectButton="True" SelectText="Enter" />
+                    <asp:CommandField ShowEditButton="True" />
                 </Columns>
             </asp:GridView>
 

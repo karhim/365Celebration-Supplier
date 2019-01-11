@@ -52,8 +52,6 @@
                         <div class="input-field col s12">
                             <asp:Label ID="lbl_subtotal" CssClass="right" runat="server"></asp:Label>
                             <br />
-                            <asp:Label ID="lbl_shippfee" CssClass="right" runat="server"></asp:Label>
-                            <br />
                             <asp:Label ID="lbl_finalprice" CssClass="right" runat="server"></asp:Label>
                             <br />
                             <br />

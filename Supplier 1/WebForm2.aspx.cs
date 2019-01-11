@@ -58,15 +58,67 @@ namespace Supplier_1
 
         }
 
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+
+
+        //protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    GridViewRow row = GridView1.SelectedRow;
+        //    int invoiceid = int.Parse(row.Cells[0].Text);
+
+        //    TextBox tb = (TextBox)row.FindControl("Textbox2");
+        //    string paymentStatus = tb.Text;
+        //    DALinvoice invoice = new DALinvoice();
+        //    invoice.updatePaymentStatus(invoiceid, paymentStatus);
+
+        //}
+
+        protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
         {
+            GridView1.EditIndex = e.NewEditIndex;
+            bindGridView();
+
+        }
+
+        protected void GridView1_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            GridView1.EditIndex = -1;
+            bindGridView();
+
+        }
+
+        protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+
+
             GridViewRow row = GridView1.SelectedRow;
             int invoiceid = int.Parse(row.Cells[0].Text);
 
-            DropDownList ddl = (DropDownList)row.FindControl("DropDownList1");
-            string paymentStatus = ddl.SelectedValue;
+            TextBox tb = (TextBox)row.FindControl("TextBox1");
+            string paymentStatus = tb.Text;
             DALinvoice invoice = new DALinvoice();
             invoice.updatePaymentStatus(invoiceid, paymentStatus);
+
+        }
+
+        private void updateGridviewRecord(int invoiceid, string paymentStatus)
+        {
+            string strConnectionString = ConfigurationManager.ConnectionStrings["Supplier"].ConnectionString;
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
+
+            string strCommandText = "UPDATE Invoice SET paymentStatus=@paymentStatus WHERE invoiceID=@invoiceid";
+
+            SqlCommand cmd = new SqlCommand(strCommandText, myConnect);
+            cmd.Parameters.AddWithValue("@invoiceid", invoiceid);
+            cmd.Parameters.AddWithValue("@paymentStatus", paymentStatus);
+
+            myConnect.Open();
+            int result = cmd.ExecuteNonQuery();
+
+            myConnect.Close();
+
+            //Cancel Edit mode
+            GridView1.EditIndex = -1;
+            bindGridView();
 
         }
     }

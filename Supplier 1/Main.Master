@@ -67,7 +67,7 @@
             <li><a class="waves-effect" href="#!"><i class="material-icons">build</i>Services</a></li>
             <li><a class="waves-effect" href="#!"><i class="material-icons">calendar_today</i>Appointment History</a></li>
             <li><a class="waves-effect" href="#!"><i class="material-icons">receipt</i>Invoice</a></li>
-            <li><a class="waves-effect" href="#!"><i class="material-icons">attach_money</i>Payment History</a></li>
+            <li><a class="waves-effect" href="WebForm2.aspx"><i class="material-icons">attach_money</i>Payment History</a></li>
             <li><a class="waves-effect" href="#!"><i class="material-icons">local_shipping</i>Delivery</a></li>
             <li><a class="waves-effect" href="#!"><i class="material-icons">message</i>Inquiry</a></li>
             <li><a class="waves-effect" href="#!"><i class="material-icons">rate_review</i>Reviews</a></li>
