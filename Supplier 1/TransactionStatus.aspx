@@ -9,14 +9,19 @@
         <div class="col s12">
             <div class="form-container">
 
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False"  OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" >
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False"  OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnRowDataBound="GridView1_RowDataBound" >
                 <Columns>
                     <asp:BoundField DataField="invoiceID" HeaderText="Invoice ID" ReadOnly="True" />
                     <asp:BoundField DataField="invoiceDate" DataFormatString="{0:dd/MM/yyyy}" HeaderText="Invoice Date" ReadOnly="True" />
                     <asp:BoundField DataField="InvoiceMonth" HeaderText="Invoice Month" ReadOnly="True" />
                     <asp:TemplateField HeaderText="Payment Status">
                         <EditItemTemplate>
-                            <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("paymentStatus") %>'></asp:TextBox>
+                            <asp:DropDownList ID="DropDownList1" runat="server" CssClass="browser-default">
+                <asp:ListItem>done</asp:ListItem>
+                <asp:ListItem>Pending</asp:ListItem>
+                                                <asp:ListItem>Waiting</asp:ListItem>
+                            </asp:DropDownList>
+                            <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("paymentStatus") %>' Visible="False"></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="Label1" runat="server" Text='<%# Bind("paymentStatus") %>'></asp:Label>
@@ -30,4 +35,5 @@
         </div>
             </div>
                </div>
+    
 </asp:Content>

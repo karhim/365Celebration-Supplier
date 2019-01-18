@@ -10,6 +10,12 @@
     <form id="form1" runat="server">
         <div>
 
+            <asp:DropDownList ID="DropDownList1" runat="server">
+                <asp:ListItem>waiting</asp:ListItem>
+                <asp:ListItem>done</asp:ListItem>
+                <asp:ListItem>pending</asp:ListItem>
+            </asp:DropDownList>
+
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False"  OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" >
                 <Columns>
                     <asp:BoundField DataField="invoiceID" HeaderText="Invoice ID" ReadOnly="True" />

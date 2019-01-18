@@ -42,7 +42,7 @@ namespace Supplier_1.DAL
 
             SqlConnection myConnect = new SqlConnection(connectionString);
             sql = new StringBuilder();
-            sql.AppendLine("SELECT invoiceDate, InvoiceMonth, paymentStatus, invoiceID FROM Invoice");
+            sql.AppendLine("SELECT  invoiceDate, InvoiceMonth, paymentStatus, invoiceID FROM Invoice");
 
             try
             {

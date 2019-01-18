@@ -90,35 +90,54 @@ namespace Supplier_1
         {
 
 
-            GridViewRow row = GridView1.SelectedRow;
+            GridViewRow row = GridView1.Rows[e.RowIndex];
             int invoiceid = int.Parse(row.Cells[0].Text);
 
-            TextBox tb = (TextBox)row.FindControl("TextBox1");
-            string paymentStatus = tb.Text;
+            DropDownList dd = (DropDownList)row.FindControl("DropDownList1");
+            string paymentStatus = dd.SelectedValue;
             DALinvoice invoice = new DALinvoice();
             invoice.updatePaymentStatus(invoiceid, paymentStatus);
-
-        }
-
-        private void updateGridviewRecord(int invoiceid, string paymentStatus)
-        {
-            string strConnectionString = ConfigurationManager.ConnectionStrings["Supplier"].ConnectionString;
-            SqlConnection myConnect = new SqlConnection(strConnectionString);
-
-            string strCommandText = "UPDATE Invoice SET paymentStatus=@paymentStatus WHERE invoiceID=@invoiceid";
-
-            SqlCommand cmd = new SqlCommand(strCommandText, myConnect);
-            cmd.Parameters.AddWithValue("@invoiceid", invoiceid);
-            cmd.Parameters.AddWithValue("@paymentStatus", paymentStatus);
-
-            myConnect.Open();
-            int result = cmd.ExecuteNonQuery();
-
-            myConnect.Close();
-
-            //Cancel Edit mode
             GridView1.EditIndex = -1;
             bindGridView();
+        }
+
+        //private void updateGridviewRecord(int invoiceid, string paymentStatus)
+        //{
+        //    string strConnectionString = ConfigurationManager.ConnectionStrings["Supplier"].ConnectionString;
+        //    SqlConnection myConnect = new SqlConnection(strConnectionString);
+
+        //    string strCommandText = "UPDATE Invoice SET paymentStatus=@paymentStatus WHERE invoiceID=@invoiceid";
+
+        //    SqlCommand cmd = new SqlCommand(strCommandText, myConnect);
+        //    cmd.Parameters.AddWithValue("@invoiceid", invoiceid);
+        //    cmd.Parameters.AddWithValue("@paymentStatus", paymentStatus);
+
+        //    myConnect.Open();
+        //    int result = cmd.ExecuteNonQuery();
+
+        //    myConnect.Close();
+
+        //    //Cancel Edit mode
+        //    GridView1.EditIndex = -1;
+        //    bindGridView();
+
+        //}
+
+        protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            int i = 0;
+            GridViewRow therow = e.Row;
+            DropDownList thedd = (DropDownList)therow.Cells[3].FindControl("DropDownList1");
+
+//            if (e.Row.RowState == DataControlRowState.Edit)
+                if (thedd != null)
+                {
+                TextBox thetb = (TextBox)therow.Cells[3].FindControl("TextBox1");
+                string currentstatus = thetb.Text;
+                thedd = (DropDownList)therow.Cells[3].FindControl("DropDownList1");
+                thedd.SelectedValue = currentstatus;
+
+            }
 
         }
     }
